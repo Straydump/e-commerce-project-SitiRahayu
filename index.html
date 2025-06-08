@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+ <html lang="id">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dapur Salti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+  /* Style untuk modal */
+  .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  }
+
+  .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 500px;
+  }
+
+  .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  }
+
+  /* Style untuk pilihan rasa dan level */
+  .product-options {
+  margin-bottom: 15px;
+  }
+
+  .product-options label {
+  display: block;
+  margin-bottom: 5px;
+  }
+
+  .product-options select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  }
+
+  /* Style untuk metode pembayaran */
+  .payment-options {
+  margin-top: 20px;
+  }
+
+  .payment-options label {
+  display: block;
+  margin-bottom: 5px;
+  }
+
+  .payment-options input[type="radio"] {
+  margin-right: 5px;
+  }
+  </style>
+ </head>
+ <body>
+  <header>
+  <nav class="navbar">
+  <h1 class="logo">DAPUR SALTI</h1>
+  <ul class="nav-links">
+  <li><a href="#beranda">Beranda</a></li>
+  <li><a href="#produk">Produk</a></li>
+  <li><a href="#kontak">Kontak</a></li>
+  </ul>
+  <div class="cart">
+  <button id="cart-button">Keranjang (<span id="cart-count">0</span>)</button>
+  <div id="cart-dropdown" class="hidden">
+  <ul id="cart-items"></ul>
+  <p id="cart-empty">Keranjang kosong</p>
+  <div id="cart-total" class="hidden">
+  <strong>Total: Rp<span id="total-price">0</span></strong>
+  <div class="payment-options">
+  <label>Pilih Metode Pembayaran:</label>
+  <input type="radio" id="qris" name="payment-method" value="qris">
+  <label for="qris">QRIS</label><br>
+  <input type="radio" id="cash" name="payment-method" value="cash">
+  <label for="cash">Tunai</label>
+  </div>
+  <button id="checkout-button">Checkout</button>
+  </div>
+  </div>
+  </div>
+  </nav>
+  </header>
+
+  <main>
+  <section id="beranda" class="hero-section">
+  <div class="hero-content">
+  <h2>Selamat Datang di Dapur Salti</h2>
+  <p>Temukan makanan favoritmu dengan harga terbaik hanya di sini.</p>
+  <a href="#produk" class="btn-primary">Lihat Produk</a>
+  </div>
+  <img src="logo.png" alt="Banner Toko Online" />
+  </section>
+
+  <section id="produk" class="products">
+  <article class="product">
+  <img src="cimol.jpg" alt="Produk 1" />
+  <h2>CIMOL BOJOT</h2>
+  <p class="description">Cimol Bojot dengan berbagai bumbu.</p>
+  <p class="price">Harga: Rp.15.000</p>
+  <button class="add-to-cart" data-name="CIMOL BOJOT" data-price="15000" data-product-id="cimol">Tambah ke Keranjang</button>
+  </article>
+
+  <article class="product">
+  <img src="wonton.jpg" alt="Produk 2" />
+  <h2>WONTON CHILI OIL</h2>
+  <p class="description">Wonton chili oil dengan level pedas yang bisa kamu pilih.</p>
+  <p class="price">Harga: Rp20.000</p>
+  <button class="add-to-cart" data-name="WONTON CHILI OIL" data-price="20000" data-product-id="wonton">Tambah ke Keranjang</button>
+  </article>
+
+  <article class="product">
+  <img src="pisang.jpg" alt="Produk 3" />
+  <h2>PISANG COKLAT</h2>
+  <p class="description">Pisang dengan toping coklat yang lumer.</p>
+  <p class="price">Harga: Rp15.000</p>
+  <button class="add-to-cart" data-name="PISANG COKLAT" data-price="15000" data-product-id="pisang">Tambah ke Keranjang</button>
+  </article>
+  </section>
+
+  <section id="kontak" class="contact-section">
+  <h2>Hubungi Kami</h2>
+  <p>Follow dan hubungi kami melalui sosial media di bawah ini:</p>
+  <div class="social-links">
+  <a href="https://www.facebook.com/share/1AMsiUmyGf/?mibextid=qi2Omg" target="_blank" rel="noopener" aria-label="Facebook">
+  <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" />
+  </a>
+  <a href="https://www.instagram.com/strhyyhrts?igsh=YjY2a2VwMTM2ZXVy" target="_blank" rel="noopener" aria-label="Instagram">
+  <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram" />
+  <a href="https://wa.me/6287815364639" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/24/733/733585.png" alt="WhatsApp" />
+  </a>
+  </div>
+  </section>
+  </main>
+
+  <footer>
+  <p>© 2025 Dapur Salti. Semua hak cipta dilindungi.</p>
+  </footer>
+
+  <!-- Modal untuk pilihan produk -->
+  <div id="productModal" class="modal">
+  <div class="modal-content">
+  <span class="close-button">&times;</span>
+  <h2>Pilih Opsi Produk</h2>
+  <div id="modalOptions">
+  <!-- Opsi produk akan ditambahkan di sini oleh JavaScript -->
+  </div>
+  <button id="addToCartButton">Tambah ke Keranjang</button>
+  </div>
+  </div>
