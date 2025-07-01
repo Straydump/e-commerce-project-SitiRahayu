@@ -1,0 +1,75 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  header {
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    margin: 0 0 10px 0;
+  }
+  
+  a {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  main {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  #cart-items {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  #cart-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #cart-items button {
+    background-color: #ff3300;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  #cart-total {
+    font-size: 18px;
+  }
+  
+  .payment-options label {
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  #checkout-button {
+    margin-top: 15px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+  }
+  
