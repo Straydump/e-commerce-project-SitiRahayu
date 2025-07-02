@@ -7,16 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 </head>
-<script src="script.js"></script>
 <body>
     <header>
         <nav class="navbar">
             <h1 class="logo">DAPUR SALTI</h1>
             <ul class="nav-links">
                 <li><a href="#beranda">Beranda</a></li>
-                <li><a href="#makanan">Makanan</a></li>
-                <li><a href="#minuman">Minuman</a></li>
+              
+                <li class="dropdown">
+                  <a href="#produk" class="dropbtn">Lihat Produk</a>
+                  <ul class="dropdown-content">
+                    <li><a href="#makanan">Makanan</a></li>
+                    <li><a href="#minuman">Minuman</a></li>
+                  </ul>
+                </li>
+                <li><a href="#tentang-kami">Tentang Kami</a></li>
                 <li><a href="#kontak">Kontak</a></li>
+              </ul>              
             </ul>
             <div class="cart">
                 <a href="cart.html" id="cart-button" class="cart-link">Keranjang (<span id="cart-count">0</span>)</a>
@@ -34,59 +41,61 @@
             </div>
             <img src="logo.png" alt="Banner Toko Online" />
         </section>
+       
+        <section id="produk">
+            <section id="makanan" class="products">
+                <article class="product">
+                    <img src="cimol.jpg" alt="CIMOL BOJOT" />
+                    <h2>CIMOL BOJOT</h2>
+                    <p class="description">Cimol Bojot dengan berbagai bumbu.</p>
+                    <p class="price">Harga: Rp10.000</p>
+                    <button class="add-to-cart" data-name="CIMOL BOJOT" data-price="15000" data-product-id="cimol">Tambah ke Keranjang</button>
+                </article>
+    
+                <article class="product">
+                    <img src="wonton.jpg" alt="WONTON CHILI OIL" />
+                    <h2>WONTON CHILI OIL</h2>
+                    <p class="description">Wonton chili oil dengan level pedas yang bisa kamu pilih.</p>
+                    <p class="price">Harga: Rp15.000</p>
+                    <button class="add-to-cart" data-name="WONTON CHILI OIL" data-price="20000" data-product-id="wonton">Tambah ke Keranjang</button>
+                </article>
+    
+                <article class="product">
+                    <img src="pisang.jpg" alt="PISANG COKLAT" />
+                    <h2>PISANG COKLAT</h2>
+                    <p class="description">Pisang dengan toping coklat yang lumer.</p>
+                    <p class="price">Harga: Rp10.000</p>
+                    <button class="add-to-cart" data-name="PISANG COKLAT" data-price="15000" data-product-id="pisang">Tambah ke Keranjang</button>
+                </article>
+    
+                <article class="product">
+                    <img src="dimsum.jpeg" alt="DIMSUM" />
+                    <h2>DIMSUM</h2>
+                    <p class="description">Dimsum ayam lezat dengan tekstur kenyal dan full daging.</p>
+                    <p class="price">Harga: Rp15.000</p>
+                    <button class="add-to-cart" data-name="DIMSUM" data-price="15000" data-product-id="dimsum">Tambah ke Keranjang</button>
+                </article>
+            </section>
+        
+            <section id="minuman" class="products">
+                <article class="product">
+                    <img src="escincau.jpeg" alt="ES CINCAU" />
+                    <h2>ES CINCAU</h2>
+                    <p class="description">Es cincau yang sehat karena dibuat dengan khas.</p>
+                    <p class="price">Harga: Rp10.000</p>
+                    <button class="add-to-cart" data-name="ES CINCAU" data-price="10000" data-product-id="escincau">Tambah ke Keranjang</button>
+                </article>
+    
+                <article class="product">
+                    <img src="escendol.jpeg" alt="ES CENDOL" />
+                    <h2>ES CENDOL</h2>
+                    <p class="description">Es cendol dengan varian warna cendol yang indah.</p>
+                    <p class="price">Harga: Rp10.000</p>
+                    <button class="add-to-cart" data-name="ES CENDOL" data-price="10000" data-product-id="escendol">Tambah ke Keranjang</button>
+                </article>
+            </section>
+          </section>
 
-        <section id="makanan" class="products">
-            <article class="product">
-                <img src="cimol.jpg" alt="CIMOL BOJOT" />
-                <h2>CIMOL BOJOT</h2>
-                <p class="description">Cimol Bojot dengan berbagai bumbu.</p>
-                <p class="price">Harga: Rp10.000</p>
-                <button class="add-to-cart" data-name="CIMOL BOJOT" data-price="15000" data-product-id="cimol">Tambah ke Keranjang</button>
-            </article>
-
-            <article class="product">
-                <img src="wonton.jpg" alt="WONTON CHILI OIL" />
-                <h2>WONTON CHILI OIL</h2>
-                <p class="description">Wonton chili oil dengan level pedas yang bisa kamu pilih.</p>
-                <p class="price">Harga: Rp15.000</p>
-                <button class="add-to-cart" data-name="WONTON CHILI OIL" data-price="20000" data-product-id="wonton">Tambah ke Keranjang</button>
-            </article>
-
-            <article class="product">
-                <img src="pisang.jpg" alt="PISANG COKLAT" />
-                <h2>PISANG COKLAT</h2>
-                <p class="description">Pisang dengan toping coklat yang lumer.</p>
-                <p class="price">Harga: Rp10.000</p>
-                <button class="add-to-cart" data-name="PISANG COKLAT" data-price="15000" data-product-id="pisang">Tambah ke Keranjang</button>
-            </article>
-
-            <!-- Menu baru -->
-            <article class="product">
-                <img src="dimsum.jpeg" alt="DIMSUM" />
-                <h2>DIMSUM</h2>
-                <p class="description">Dimsum ayam lezat dengan tekstur kenyal dan full daging.</p>
-                <p class="price">Harga: Rp15.000</p>
-                <button class="add-to-cart" data-name="DIMSUM" data-price="15000" data-product-id="dimsum">Tambah ke Keranjang</button>
-            </article>
-        </section>
-
-        <section id="minuman" class="products">
-            <article class="product">
-                <img src="escincau.jpeg" alt="ES CINCAU" />
-                <h2>ES CINCAU</h2>
-                <p class="description">Es cincau yang sehat karena dibuat dengan khas.</p>
-                <p class="price">Harga: Rp10.000</p>
-                <button class="add-to-cart" data-name="ES CINCAU" data-price="10000" data-product-id="escincau">Tambah ke Keranjang</button>
-            </article>
-
-            <article class="product">
-                <img src="escendol.jpeg" alt="ES CENDOL" />
-                <h2>ES CENDOL</h2>
-                <p class="description">Es cendol dengan varian warna cendol yang indah.</p>
-                <p class="price">Harga: Rp10.000</p>
-                <button class="add-to-cart" data-name="ES CENDOL" data-price="10000" data-product-id="escendol">Tambah ke Keranjang</button>
-            </article>
-        </section>
               <!-- Modal -->
 <div id="optionModal" class="modal" style="display:none;">
     <div class="modal-content">
@@ -124,7 +133,11 @@
   <script src="script.js"></script>
 </body>
 </html>
-
+<section id="tentang-kami" class="about-section">
+    <h2>Tentang Kami</h2>
+    <p>Dapur Salti adalah tempat terbaik untuk menikmati berbagai makanan dan minuman lezat dengan harga terjangkau. Kami berdedikasi untuk memberikan kualitas terbaik dan pelayanan ramah untuk setiap pelanggan kami.</p>
+    <p>Didirikan pada tahun 2020, Dapur Salti terus berinovasi dengan menu-menu baru yang menggugah selera dan menggunakan bahan-bahan segar pilihan.</p>
+  </section>  
         <section id="kontak" class="contact-section">
             <h2>Hubungi Kami</h2>
             <p>Follow dan hubungi kami melalui sosial media di bawah ini:</p>
